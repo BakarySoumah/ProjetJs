@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Next level</title>
+</head>
+<body>
+    <section class="section">
+        <video src="Fii moy Senegal copy.mp4" type="video/mp4" autoplay muted loop></video>
+        <h2>Senegal</h2>
+        <div class="doc">
+
+        </div>
+    </section>
+
+
+    <script>
+
+        //Pour personnaliser sa souris
+        const doc = document.querySelector('.doc');
+        const section = document.querySelector('.section');
+
+        doc.onclick = function(){
+            doc.classList.toggle('active');
+            section.classList.toggle('active');
+        }
+
+        document.addEventListener("mousemove", function(e){
+            const doc = document.querySelector('.doc');
+            doc.style.left = e.pageX + 'px';
+            doc.style.top = e.pageY + 'px';
+        });
+    </script>
+</body>
+</html>
